@@ -1,0 +1,10 @@
+# Ignoră toate modelele 3D din acest folder
+# Acestea sunt prea mari pentru a fi incluse în repository
+*.glb
+*.gltf
+*.bin
+
+# Păstrează README-ul
+!README.md
+!.gitignore
+

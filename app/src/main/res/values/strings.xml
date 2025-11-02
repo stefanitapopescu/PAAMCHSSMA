@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Navigare Facultate 3D</string>
+    <string name="search_hint">Caută profesor sau sală...</string>
+    <string name="floor_1">Etaj 1</string>
+    <string name="floor_2">Etaj 2</string>
+    <string name="floor_3">Etaj 3</string>
+    <string name="ar_mode">Mod AR</string>
+    <string name="recenter_camera">Recentrare cameră</string>
+    <string name="loading_model">Se încarcă modelul...</string>
+    <string name="ar_not_supported">Acest dispozitiv nu suportă ARCore</string>
+    <string name="camera_permission_required">Permisiunea pentru cameră este necesară pentru modul AR</string>
+    <string name="poi_added">%d puncte de interes încărcate</string>
+    <string name="floor_switch">Etaj %d</string>
+</resources>
