@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".schedule.ScheduleActivity">
+
+    <!-- Toolbar SIMPLU - FĂRĂ BUTON BACK -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#6200EE"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orarul meu"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Content cu scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card pentru adăugare curs -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="➕ Adaugă curs nou"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#6200EE"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Ora -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ORA"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/timeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 10:00"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:drawable/edit_text" />
+
+                <!-- Nume curs -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NUME CURS"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/courseEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: Programare"
+                    android:inputType="textCapWords"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:drawable/edit_text" />
+
+                <!-- Facultate -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FACULTATE"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/facultyEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: Automatică"
+                    android:inputType="textCapWords"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:drawable/edit_text" />
+
+                <!-- Sală -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SALĂ"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/roomEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: B613"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:drawable/edit_text" />
+
+                <!-- Etaj -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ETAJ"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/floorEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 6"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:drawable/edit_text" />
+
+                <!-- Buton adăugare -->
+                <Button
+                    android:id="@+id/addScheduleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="ADAUGĂ CURS"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <!-- Titlu listă cursuri -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📚 Cursurile mele"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Empty state -->
+            <TextView
+                android:id="@+id/emptyStateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Încă nu ai adăugat cursuri."
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                android:padding="24dp"
+                android:textColor="#9E9E9E"
+                android:visibility="gone" />
+
+            <!-- Listă cursuri -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/scheduleRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

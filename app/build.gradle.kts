@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -55,18 +57,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     
-    // Sceneform și Filament pentru modele 3D
-    implementation("io.github.sceneview:sceneview:2.2.1")
-    implementation("io.github.sceneview:arsceneview:2.2.1")
-    
-    // Google Filament
-    implementation("com.google.android.filament:filament-android:1.51.5")
-    implementation("com.google.android.filament:filament-utils-android:1.51.5")
-    implementation("com.google.android.filament:gltfio-android:1.51.5")
-    
-    // ARCore pentru AR opțional
-    implementation("com.google.ar:core:1.44.0")
-    
     // Material Design
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -75,6 +65,19 @@ dependencies {
     // Coroutines pentru async
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+
+    // Firebase Authentication
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth.ktx)
+
+    // Google Maps
+    implementation(libs.play.services.maps)
+
+    // Room (local schedule storage)
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt(libs.room.compiler)
+    implementation(libs.androidx.recyclerview)
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

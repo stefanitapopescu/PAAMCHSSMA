@@ -2,14 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permisiuni pentru cameră și senzori -->
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Permisiuni -->
     <uses-permission android:name="android.permission.INTERNET" />
-    
-    <!-- Feature AR opțional (nu forțează dispozitivele fără AR) -->
-    <uses-feature android:name="android.hardware.camera.ar" android:required="false" />
-    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
-    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="true" />
     
     <application
         android:allowBackup="true"
@@ -20,11 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PaamChsSma">
-        
-        <!-- Metadata pentru ARCore -->
+
+        <!-- Cheie Google Maps -->
         <meta-data
-            android:name="com.google.ar.core"
-            android:value="optional" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
         
         <!-- FileProvider pentru partajare fișiere -->
         <provider
@@ -37,20 +31,55 @@
                 android:resource="@xml/file_paths" />
         </provider>
         
-        <!-- MainActivity COMPLETĂ cu toate funcționalitățile -->
+        <!-- Activitate de login - LAUNCHER (cu buton Skip) -->
         <activity
-            android:name=".MainActivityFull"
+            android:name=".auth.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Material.Light">
+            android:windowSoftInputMode="adjustResize"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activitate de înregistrare -->
+        <activity
+            android:name=".auth.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:label="@string/signup_title" />
+
+        <!-- Ecran principal cu harta campusului + Orar -->
+        <activity
+            android:name=".campus.CampusMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" />
+
+        <!-- Ecran pentru gestionarea orarului -->
+        <activity
+            android:name=".schedule.ScheduleActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:label="@string/schedule_bottom_sheet_title" />
+
+        <!-- MainActivity COMPLETĂ cu modelul 3D -->
+        <activity
+            android:name=".MainActivityFull"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Material.Light" />
         
         <!-- MainActivity simplificată pentru debugging (backup) -->
         <activity

@@ -99,6 +99,11 @@ class MainActivityFull : Activity() {
             btnForward = findViewById(R.id.btnForward)
             btnBackward = findViewById(R.id.btnBackward)
             
+            // Buton înapoi la hartă
+            findViewById<Button>(R.id.backToMapButton).setOnClickListener {
+                finish() // Închide activity-ul și revine la CampusMapActivity
+            }
+            
             // Configurează WebView pentru model 3D
             setupWebView()
             

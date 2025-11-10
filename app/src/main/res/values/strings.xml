@@ -11,4 +11,71 @@
     <string name="camera_permission_required">Permisiunea pentru cameră este necesară pentru modul AR</string>
     <string name="poi_added">%d puncte de interes încărcate</string>
     <string name="floor_switch">Etaj %d</string>
+    
+    <!-- Login -->
+    <string name="login_title">Bine ai venit!</string>
+    <string name="login_subtitle">Autentifică-te pentru a accesa campusul</string>
+    <string name="login_email_label">EMAIL</string>
+    <string name="login_email_hint">exemplu@student.upt.ro</string>
+    <string name="login_password_label">PAROLĂ</string>
+    <string name="login_password_hint">Introdu parola</string>
+    <string name="login_button">Intră în campus</string>
+    <string name="login_no_account">Nu ai cont?</string>
+    <string name="login_sign_up_link">Înregistrează-te</string>
+    <string name="login_skip_button">Sari peste (Test)</string>
+    <string name="login_error_empty_fields">Te rugăm să completezi email și parolă.</string>
+    <string name="login_error_generic">Autentificare eșuată: %1$s</string>
+    <string name="login_success">Autentificare reușită!</string>
+    
+    <!-- Sign Up -->
+    <string name="signup_title">Creare cont</string>
+    <string name="signup_subtitle">Completează datele pentru a te înregistra</string>
+    <string name="signup_back_button">← Înapoi</string>
+    <string name="signup_lastname_label">NUME</string>
+    <string name="signup_lastname_hint">ex: Popescu</string>
+    <string name="signup_firstname_label">PRENUME</string>
+    <string name="signup_firstname_hint">ex: Ion</string>
+    <string name="signup_email_label">EMAIL</string>
+    <string name="signup_email_hint">exemplu@student.upt.ro</string>
+    <string name="signup_password_label">PAROLĂ</string>
+    <string name="signup_password_hint">Minim 6 caractere</string>
+    <string name="signup_confirm_password_label">CONFIRMĂ PAROLA</string>
+    <string name="signup_confirm_password_hint">Introdu din nou parola</string>
+    <string name="signup_button">Creează cont</string>
+    <string name="signup_have_account">Ai deja cont?</string>
+    <string name="signup_login_link">Autentifică-te</string>
+    <string name="signup_error_empty_fields">Te rugăm să completezi toate câmpurile.</string>
+    <string name="signup_error_password_mismatch">Parolele nu se potrivesc!</string>
+    <string name="signup_error_password_short">Parola trebuie să aibă cel puțin 6 caractere.</string>
+    <string name="signup_error_email_exists">Acest email este deja înregistrat.</string>
+    <string name="signup_error_invalid_email">Adresa de email este invalidă.</string>
+    <string name="signup_error_generic">Înregistrare eșuată: %1$s</string>
+    <string name="signup_success">Cont creat cu succes!</string>
+    
+    <!-- Campus Map -->
+    <string name="map_campus_title">Campus UPT</string>
+    <string name="map_marker_automatic">Facultatea de Automatică și Calculatoare</string>
+    <string name="map_marker_electronics">Facultatea de Electronică și Telecomunicații</string>
+    <string name="map_marker_constructions">Facultatea de Construcții</string>
+    <string name="map_marker_rectorate">Rectorat</string>
+    <string name="map_marker_other">Clădire campus</string>
+    <string name="logout_button">Deconectare</string>
+    <string name="logout_confirm">Ești sigur că vrei să te deconectezi?</string>
+    <string name="logout_success">Deconectat cu succes!</string>
+    
+    <!-- 3D Model -->
+    <string name="back_to_map">← Înapoi la hartă</string>
+    
+    <!-- Schedule -->
+    <string name="schedule_bottom_sheet_title">Orarul meu</string>
+    <string name="schedule_add_button">Adaugă curs</string>
+    <string name="schedule_empty_state">Încă nu ai adăugat cursuri.</string>
+    <string name="schedule_field_time">Ora</string>
+    <string name="schedule_field_course">Nume curs</string>
+    <string name="schedule_field_faculty">Facultate</string>
+    <string name="schedule_field_room">Sală</string>
+    <string name="schedule_field_floor">Etaj</string>
+    <string name="schedule_remove">Șterge</string>
+    <string name="schedule_error_fields">Completează toate câmpurile pentru a salva cursul.</string>
+    <string name="schedule_saved_message">Curs salvat în orar.</string>
 </resources>

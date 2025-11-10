@@ -16,14 +16,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Toolbar sus -->
+    <!-- Toolbar sus (simplu, fără buton back) -->
     <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:background="#6200EE"
         android:elevation="4dp"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Navigare Facultate 3D"
+            android:text="Model 3D - Facultate"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="#FFFFFF"
-        android:elevation="4dp"
+        android:elevation="6dp"
         android:orientation="horizontal"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
             android:contentDescription="Search"
-            android:src="@android:drawable/ic_menu_search" />
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="#6200EE" />
 
         <EditText
             android:id="@+id/searchEditText"
@@ -74,56 +75,113 @@
             android:textSize="16sp" />
     </LinearLayout>
 
-    <!-- Butoane etaje -->
+    <!-- BUTON BACK - Stânga jos (ELEGANT!) -->
+    <Button
+        android:id="@+id/backToMapButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#6200EE"
+        android:text="←"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Text explicativ sub buton back -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="#AA000000"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="Înapoi"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/backToMapButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Buton recentrare (stânga, deasupra back) -->
+    <Button
+        android:id="@+id/fabRecenter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#9C27B0"
+        android:text="⊙"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toTopOf="@id/backToMapButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Butoane etaje (dreapta sus) -->
     <LinearLayout
         android:id="@+id/floorButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:background="#AA000000"
+        android:padding="8dp"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchCard">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etaje"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/btnFloor3"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="#FF5722"
             android:text="E3"
-            android:textSize="16sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnFloor2"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="#FF5722"
             android:text="E2"
-            android:textSize="16sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnFloor1"
             android:layout_width="56dp"
             android:layout_height="56dp"
+            android:backgroundTint="#FF5722"
             android:text="E1"
-            android:textSize="16sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Buton recentrare -->
-    <Button
-        android:id="@+id/fabRecenter"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="200dp"
-        android:backgroundTint="#6200EE"
-        android:text="⊙"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Butoane de navigare (elegante) -->
+    <!-- Butoane de navigare (dreapta jos - elegante!) -->
     <LinearLayout
         android:id="@+id/movementControls"
         android:layout_width="wrap_content"
@@ -131,8 +189,22 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
+        android:background="#AA000000"
+        android:padding="8dp"
+        android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Titlu -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigare"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
 
         <!-- Rând sus (Sus) -->
         <LinearLayout
@@ -150,7 +222,8 @@
                 android:contentDescription="Sus"
                 android:text="↑"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -170,7 +243,8 @@
                 android:contentDescription="Stânga"
                 android:text="←"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnForward"
@@ -181,7 +255,8 @@
                 android:contentDescription="Înainte"
                 android:text="↑"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnRight"
@@ -192,7 +267,8 @@
                 android:contentDescription="Dreapta"
                 android:text="→"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -212,7 +288,8 @@
                 android:contentDescription="Înapoi"
                 android:text="↓"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnDown"
@@ -223,7 +300,8 @@
                 android:contentDescription="Jos"
                 android:text="↓"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -247,7 +325,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:background="#FFFFFF"
-        android:elevation="4dp"
+        android:elevation="8dp"
         android:padding="16dp"
         android:text="Se încarcă..."
         android:textColor="#000000"
@@ -259,4 +337,3 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

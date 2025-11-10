@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Înlocuiește valoarea de mai jos cu cheia reală Google Maps (console.cloud.google.com) -->
+    <string name="google_maps_key" translatable="false">AIzaSyDo7SkzLikuR8dPEoxGzBrF3cdIQDInSHw</string>
+</resources>
+
